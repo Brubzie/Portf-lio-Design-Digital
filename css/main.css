@@ -1,0 +1,185 @@
+/* Formatação do site ---------------------------
+-------------------------------------------------*/
+html, body {
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 90px;
+    background: #F0F0F0;
+}
+
+.nome {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo-nav {
+    color: #FF69B4;
+    transition: transform 0.3s;
+}
+
+.logo-nav:hover {
+    color: #FFDAB9;
+    transform: scale(1.1);
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.h1, .h2, .h3, .h4, .h5 {
+    color: indigo;
+    text-shadow: 0 0 2px mediumpurple;
+}
+
+.btn-custom {
+    color: black;
+    background: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    font-weight: bold;
+    color: white;
+    background: #87CEEB;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+/* Estilo personalizado para a galeria de imagens
+-------------------------------------------------*/
+.galeria {
+    background-color: white;
+    padding: 50px 0; /* Espaçamento interno */
+}
+
+.galeria {
+    background-color: #f9f9f9; /* Background suave */
+    padding: 50px 0; /* Espaçamento interno */
+    max-height: 500px; /* Altura máxima */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+  }
+
+  .galeria-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .galeria .row {
+    gap: 20px;
+  }
+
+  .galeria img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+
+  .galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+  }
+
+  /* Estilização para o título ao passar o mouse */
+  .galeria img:hover::before {
+    content: attr(title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .galeria img:hover::before {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+/* Definindo variáveis para cores ---------------
+-------------------------------------------------*/
+:root{
+    --primary: #AFEEEE;
+    --primary-streigth: #4682B4;
+    --secondary: #00ABBD;
+    /* .tertiary não é um padrão do Bootstrap, mas pode ser adicionado! */
+    --tertiary: #72F2EB;
+    --success: #0099DD;
+    --info: #A1C7E0;
+    --warning: #FF9933;
+    --danger: #E3371E;
+    --rosavibrante: #FF1493;
+    --salmão: #E6B0AA;
+}
+
+/* Sobscrevendo classes padrão do Bootstrap ------
+-------------------------------------------------*/
+/* a marcação !important dá um peso maior a regra, sobrescrevendo regras prévias */
+.bg-primary, .btn-primary{
+    background-color: var(--primary) !important;
+}
+.bg-secondary, .btn-secondary{
+    background-color: var(--secondary) !important;
+}
+.bg-tertiary, .btn-tertiary{
+    background-color: var(--tertiary) !important;
+}
+.bg-success, .btn-success{
+    background-color: var(--success) !important;
+}
+.bg-info, .btn-info{
+    background-color: var(--info) !important;
+}
+.bg-warning, .btn-warning{
+    background-color: var(--warning) !important;
+}
+.bg-danger .btn-danger{
+    background-color: var(--danger) !important;
+}
+.nav-link {
+    color: var(--primary) !important ;
+}
+.nav-link:hover{
+    color: var(--primary-streigth) !important ; 
+}
+.text-primary {
+    color: var(--rosavibrante) !important;
+}
+.text-primary-emphasis {
+    color: var(--salmão) !important;
+}
+
+/* Estilização da Scrollbar ----------------------
+-------------------------------------------------*/
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+
+/* Definindo tamanho de arquivos de mídia --------
+-------------------------------------------------*/
+@media {
+    .galeria img {
+
+    }
+}
