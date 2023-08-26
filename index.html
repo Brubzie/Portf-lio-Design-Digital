@@ -22,33 +22,7 @@
   </head>
   <body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
   
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-  
-        // Store hash
-        var hash = this.hash;
-  
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 400, function(){
-  
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  });
-  </script>
 
     <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 mb-5 fixed-top" data-bs-theme="dark" style="font-family: Arial, Helvetica, sans-serif;">
@@ -93,34 +67,51 @@
         <p class="lead fw-normal">Uma plataforma dedicada aos meus projetos pessoais e profissionais.</p>
         <hr class="my-4">
         <p class="fw-normal">Explore meu portfólio!</p>
-        <a class="btn btn-light btn-outline-dark border-0 btn-lg btn-custom" href="#sobre" role="button mono">Começar</a>
+        <a class="btn btn-light btn-outline-dark border-0 btn-lg btn-custom" href="#sobre" role="button mono" title="Explore o site">Começar</a>
     </div>
 </div>
 <!-- /Boas-vindas -->
 
-<!-- Apresentações iniciais -->
-<div class="container-fluid" style="max-width: 1200px; width: 80vw;">
-  <section id="sobre" class="mt-5">
+<!-- Apresentação / Sobre -->
+<div class="container-fluid rounded-2 bg-light" style="max-width: 1200px; width: 80vw;" id="sobre">
+  <section class="mt-5">
     <div class="row">
       <div class="col-md-6">
         <h2 class="h2">Apresentação</h2>
         <p class="lh-lg">Sou uma designer digital apaixonada por criar projetos visualmente impactantes.</p>
         <p class="lh-lg">Minha missão é transformar ideias em designs incríveis que cativam e comunicam.</p>
       </div>
-      <div class="col-md-6">
-        <div class="card align-items-center" style="width: 18rem; height: auto;">
-          <img src="img/CarolSobre.jpg" class="card-img-top" alt="Foto de Carolina">
-          <div class="card-body">
-            <h5 class="h5 card-title">Quem é <span class="nome">Carolina Camargo</span>?</h5>
-            <p class="card-text">Oi! Sou a Carol, uma entusiasta de design e da criatividade. A minha jornada começou quando uma faísca de interesse pelo design foi acendida...</p>
-            <a href="#" class="btn btn-success">Leia mais</a>
-          </div>
+      <div class="card m-1" style="width: 18rem; height: auto;">
+        <img src="img/CarolSobre.jpg" class="card-img-top" alt="Foto da Carol" title="Carol">
+      
+        <div class="card-body">
+          <h5 class="h5 card-title">Quem é <span class="nome">Carolina Camargo</span>?</h5>
+          <p class="card-text">Oi! Sou a Carol, uma entusiasta de design e da criatividade. A minha jornada começou quando uma faísca de interesse pelo design foi acendida...</p>
+          <a href="#" class="btn btn-success">Leia mais</a>
+        </div>
+      </div>
+      
+      <div class="card m-1" style="width: 18rem; height: auto;" aria-hidden="true">
+        <img src="img/CarolSobre2.jpg" class="card-img-top" alt="Foto da Carol" title="Carol">
+        <div class="card-body">
+          <h5 class="card-title placeholder-wave">
+            <span class="placeholder col-6"></span>
+          </h5>
+          <p class="card-text placeholder-wave">
+            <span class="placeholder col-7"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-6"></span>
+            <span class="placeholder col-8"></span>
+          </p>
+          <a href="#" tabindex="-1" class="btn btn-success disabled placeholder col-md-4"></a>
         </div>
       </div>
     </div>
   </section>
 </div>
 
+<!-- Galeria -->
 <div class="container mt-5">
   <section id="museum" class="mb-5">
     <h2 class="text-center galeria-title">Galeria</h2>
@@ -171,10 +162,10 @@
 </div>
     
 <!-- Footer -->
-<footer class="bg-body-tertiary text-center text-light mt-5 m-auto p-3 border-0" data-bs-theme="dark">
+<footer class="btn-custom-dark-gradient text-center text-light mt-5 m-auto p-3 border-0">
     <!-- Grid container -->
     <div class="container p-4">
-      <h4 class="text-center text-white-50">Me siga em minhas redes sociais</h4>
+      <h4 class="text-center text-white-75">Me siga em minhas redes sociais</h4>
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
@@ -215,7 +206,7 @@
 
       <!-- Section: Text -->
       <section class="mb-4">
-        <p class="text-body-tertiary">
+        <p class="text-white-50">
             "Transformando ideias em pixels, cores em emoções e sonhos em designs cativantes. Bem-vindo ao meu mundo criativo no qual cada projeto conta uma história única."
         </p>
       </section>
@@ -314,6 +305,35 @@
     </div>
   </footer>
   <!-- Footer - end -->
+
+  <!-- Scroll Smooth Script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+  
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 400, function(){
+  
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+  </script>
 
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
