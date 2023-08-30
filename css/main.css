@@ -39,6 +39,29 @@ p {
     text-shadow: 0 0 2px mediumpurple;
 }
 
+.writeMachine {
+    font-family: monospace;
+    border-right: 4px solid;
+    width: 38ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(38), blinking 0.5s;
+}
+
+/* Efeito Máquina de Escrever --------------------
+-------------------------------------------------*/
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+
 /* Buttom Custom ---------------------------------
 -------------------------------------------------*/
 .btn-custom {
