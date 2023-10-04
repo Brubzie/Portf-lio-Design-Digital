@@ -12,11 +12,36 @@ html {
 }
 
 body {
+    height: 100%;
     padding-top: 90px;
     background: #F0F0F0;
 }
 
-.nome {
+/* Iframe Sobre */
+.iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.iframe-container iframe {
+    width: 45vw;
+    height: 45vh;
+    border: none;
+    border-radius: 25px;
+}
+
+.iframe-content {
+    text-align: center;
+}
+
+.nomeCard {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -36,7 +61,6 @@ p {
 
 .h1, .h2, .h3, .h4, .h5 {
     color: indigo;
-    text-shadow: 0 0 2px mediumpurple;
 }
 
 .card-img-top {
@@ -57,29 +81,6 @@ footer {
     border-radius: 3% 3% 0 0;
 }
 
-.writeMachine {
-    font-family: monospace;
-    border-right: 4px solid;
-    width: 15ch;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 2s steps(15), blinking 0.5s;
-}
-
-/* Efeito Máquina de Escrever --------------------
--------------------------------------------------*/
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
-
-@keyframes blinking {
-    50% {
-        border-color: transparent;
-    }
-}
-
 /* Buttom Custom ---------------------------------
 -------------------------------------------------*/
 .btn-custom {
@@ -87,6 +88,7 @@ footer {
     background: white;
     border: none;
     font-family: sans-serif;
+    transition: 0.2s ease-in-out;
 }
 
 .btn-custom:hover {

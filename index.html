@@ -11,6 +11,9 @@
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- JS Personalizao -->
+    <script src="sobre.js" defer></script>
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/x-icon">
 
@@ -24,7 +27,7 @@
 
   
 
-    <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 mb-5 fixed-top" data-bs-theme="dark" style="font-family: Arial, Helvetica, sans-serif;">
     <div class="container">
         <a class="navbar-brand logo-nav" href="#"><img src="img/favicon_io/favicon-32x32.png" width="22" height="auto" alt="Logo" class="img-fluid">Portfólios Carol</a>
@@ -38,13 +41,14 @@
                     <a class="nav-link" href="index.html" target="_self">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#">Parceiros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mailto:carolcamarc.c@gmail.com" target="_blank" title="Me envie um e-mail">Contato</a>
+                </li>
+                <!-- Iframe Sobre -->
+                <li class="nav-item">
+                  <li class="nav-item active"><button class="nav-link btn" onclick="loadSobre()">Sobre</button></li>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -60,8 +64,13 @@
 </nav>
 <!-- /Navbar -->
 
+<!-- Iframe Sobre -->
+<div class="iframe-container" id="iframeContainer">
+  <iframe id="sobreFrame" src="sobre.html" frameborder="0"></iframe>
+</div>
+
 <!-- Boas-vindas -->
-<!-- <div class="container d-block text-center mt-0 p-3">
+<div class="container d-block text-center mt-0 p-3">
     <div class="jumbotron">
         <h1 class="display-4 text-primary fw-medium">Bem-Vindo à <span class="text-primary-emphasis">Portfólios Carol</span></h1>
         <p class="lead fw-normal">Uma plataforma dedicada aos meus projetos pessoais e profissionais.</p>
@@ -69,16 +78,6 @@
         <p class="fw-normal">Explore meu portfólio!</p>
         <a class="btn btn-light btn-outline-dark border-0 btn-lg btn-custom" href="#sobre" role="button mono" title="Explore o site">Começar</a>
     </div>
-</div> -->
-
-<!-- Boas-vindas Máquina de Escrever -->
-<div class="container d-block mt-0 p-3 text-center">
-  <div class="jumbotron">
-      <p class="writeMachine">Olá, bem-vindo!</p>
-      <hr class="my-2">
-        <p class="fw-normal">Explore meu portfólio!</p>
-        <a class="btn btn-light btn-outline-dark border-0 btn-lg btn-custom" href="#sobre" role="button mono" title="Explore o site">Começar</a>
-  </div>
 </div>
 
 
@@ -88,16 +87,17 @@
     <div class="row">
       <div class="col-md-6">
         <h2 class="h2">Apresentação</h2>
-        <p class="lh-lg">Sou uma designer digital apaixonada por criar projetos visualmente impactantes.</p>
-        <p class="lh-lg">Minha missão é transformar ideias em designs incríveis que cativam e comunicam.</p>
+        <p class="lh-sm">Sou uma designer digital apaixonada por criar projetos visualmente impactantes.</p>
+        <p class="lh-sm">Minha missão é transformar ideias em designs incríveis que cativam e comunicam.</p>
       </div>
       <div class="card m-1" style="width: 18rem; height: auto;">
-        <img src="img/CarolSobre.jpg" class="card-img-top" alt="Foto da Carol" title="Carolina">
+        <img src="img/CarolSobre.jpg" class="card-img-top" alt="Foto">
       
         <div class="card-body">
-          <h5 class="h5 card-title">Quem é <span class="nome">Carolina Camargo</span>?</h5>
-          <p class="card-text">Oi! Sou a Carol, uma entusiasta de design e da criatividade. A minha jornada começou quando uma faísca de interesse pelo design foi acendida...</p>
-          <a href="#" class="btn btn-success">Leia mais</a>
+          <div class="col-md-6">
+            <h5 class="h5 card-title">Quem é <span class="nomeCard">Carolina Camargo</span>?</h5>
+            <p class="card-text">Oi! Sou a Carol, uma entusiasta de design e da criatividade. A minha jornada começou quando uma faísca de interesse pelo design foi acendida.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -233,8 +233,9 @@
   });
   </script>
 
-    <!-- JS Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
   </body>
 </html>
