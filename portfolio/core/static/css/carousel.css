@@ -1,0 +1,39 @@
+.c-item {
+    height: 95vh; /* altura inicial */
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* Regras de mídia para diferentes tamanhos de tela */
+
+/* Para telas pequenas (sm) */
+@media (max-width: 576px) {
+    .c-item {
+        height: 95vh; /* ajuste a altura conforme necessário */
+    }
+}
+
+/* Para telas médias (md) */
+@media (max-width: 768px) {
+    .c-item {
+        height: 95vh; /* ajuste a altura conforme necessário */
+    }
+}
+
+/* Para telas grandes (lg) */
+@media (max-width: 992px) {
+    .c-item {
+        height: 95vh; /* ajuste a altura conforme necessário */
+    }
+}
+
+/* Para telas extra grandes (xl) */
+@media (max-width: 1200px) {
+    .c-item {
+        height: 95vh; /* ajuste a altura conforme necessário */
+    }
+}

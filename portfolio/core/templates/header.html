@@ -1,0 +1,92 @@
+{% load static %}
+
+<!-- CDN Link -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+
+<!-- CSS | Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- CSS | Personalizado -->
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/css/carousel.css' %}">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-warning" data-bs-theme="light">
+    <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand fs-4" href="index.html" target="_self">Lanchonete Chorume's</a>
+    <!-- Toggle btn -->
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Barra Lateral -->
+    <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+        <!-- Cabeçalho Barra Lateral -->
+        <div class="offcanvas-header text-white border-bottom ">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Lanchonete Chorume's</h5>
+            <button type="button" class="btn-close btn-close-white shadow-none " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <!-- Barra Lateral Body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mx-2" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mx-2" href="lanches.html" target="_self">Nossos Lanches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active mx-2" href="#contato">Contato</a>
+                </li>
+            </ul>
+            <!-- Login / Cadastro -->
+            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                <a href="#login" class="text-dark">Login</a>
+                <a href="#cadastro" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: blueviolet;">Cadastro</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+
+<!-- Scroll Smooth Script -->
+{% block javascript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 400, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+{% endblock javascript %}
