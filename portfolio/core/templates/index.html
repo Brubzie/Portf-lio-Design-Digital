@@ -1,6 +1,6 @@
-{% load static %}
-
 {% extends "base.html" %}
+
+{% load static %}
 
 {% include "header.html" %}
 
@@ -12,39 +12,48 @@
     <!-- Carousel main -->
     <div id="hero-carousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-wrap="true">
         <div class="carousel-indicators">
-        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
     
         <div class="carousel-inner">
-        <div class="carousel-item active c-item">
-            <img src="../img/bandeja_c-item-1.jpg" class="d-block w-100 c-img" alt="Slide 1">
-            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center top-0">
-            <p class="mt-5 fs-3 text-uppercase">Descubra um mundo novo de sabores</p>
-            <h1 class="display-1 fw-bolder text-capitalize">Lanchonete Chorume's</h1>
-            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Nossos lanches</button>
+            <!-- Slide 1 -->
+            <div class="carousel-item active c-item">
+                <img src="" class="d-block w-100 c-img" alt="Slide 1">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center top-0">
+                    <p class="mt-5 fs-3 text-uppercase">Descubra um mundo novo de sabores</p>
+                    <h1 class="display-1 fw-bolder text-capitalize">Lanchonete Chorume's</h1>
+                    <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Nossos lanches</button>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item c-item">
-            <img src="../img/tres_lanches_c-item-2.jpg" class="d-block w-100 c-img" alt="Slide 2">
-            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center top-0">
-            <p class="text-uppercase fs-3 mt-5">A temporada apenas começou</p>
-            <p class="display-1 fw-bolder text-capitalize">3 novos lanches</p>
-            <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-                data-bs-target="#booking-modal">Confira já</button>
+            <!-- End - Slide 1 -->
+
+            <!-- Slide 2 -->
+            <div class="carousel-item c-item">
+                <img src="" class="d-block w-100 c-img" alt="Slide 2">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center top-0">
+                    <p class="text-uppercase fs-3 mt-5">A temporada apenas começou</p>
+                    <p class="display-1 fw-bolder text-capitalize">3 novos lanches</p>
+                    <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+                        data-bs-target="#booking-modal">Confira já</button>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item c-item">
-            <img src="../img/hamburguer_c-item_3.jpg" class="d-block w-100 c-img" alt="Slide 3">
-            <div class="carousel-caption d-flex flex-column justify-content-center align-items-center top-0">
-            <p class="text-uppercase fs-3 mt-5">Ingredientes de 1ª linha</p>
-            <p class="display-1 fw-bolder text-capitalize">uma explosão de sabor</p>
-            <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-                data-bs-target="#booking-modal">Saiba mais</button>
+            <!-- End - Slide 2 -->
+
+            <!-- Slide 3 -->
+            <div class="carousel-item c-item">
+                <img src="" class="d-block w-100 c-img" alt="Slide 3">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center top-0">
+                    <p class="text-uppercase fs-3 mt-5">Ingredientes de 1ª linha</p>
+                    <p class="display-1 fw-bolder text-capitalize">uma explosão de sabor</p>
+                    <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+                        data-bs-target="#booking-modal">Saiba mais</button>
+                </div>
             </div>
+            <!-- End - Slide 3 -->
         </div>
-        </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -55,6 +64,35 @@
         </button>
     </div>
     <!-- End - Carousel main -->
-{% endblock content %}
 
-{% include "footer.html" %}
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white mt-5">
+        <div class="container p-4">
+            <section class="mb-4">
+                <h4 class="text-white-75">Me siga nas redes sociais</h4>
+                <!-- Redes sociais -->
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-floating m-1" href="https://www.facebook.com/profile.php?id=100077446606937" target="_blank">
+                        <img class="img-fluid svg-icon" src="{% static 'img/facebook/facebook-branco.svg' %}" alt="facebook logo">
+                    </a>
+                    <a class="btn btn-floating m-1" href="https://www.instagram.com/your.carol/" target="_blank">
+                        <img class="img-fluid svg-icon" src="{% static 'img/instagram/instagram-branco.svg' %}" alt="instagram logo">
+                    </a>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <p class="text-white-50">
+                    Transformando ideias em pixels, cores em emoções e sonhos em designs cativantes. Bem-vindo ao meu mundo criativo no qual cada projeto conta uma história única.
+                </p>
+            </section>
+
+            <div class="text-center p-3 bg-dark rounded-2">
+                ©2024 Copyright:
+                <a class="text-white-50" href="https://github.com/Brubzie" target="_blank">Bruno, Brubz/GitHub.</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer - end -->
+
+{% endblock content %}

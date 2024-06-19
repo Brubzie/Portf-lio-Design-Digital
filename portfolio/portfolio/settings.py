@@ -47,7 +47,7 @@ THIRDY_PARTY_APPS = [
 ]
 
 MY_APPS = [
-    "portfolio",
+    "core",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRDY_PARTY_APPS + MY_APPS
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "setup.wsgi.application"
+WSGI_APPLICATION = "portfolio.wsgi.application"
 
 
 # Database
@@ -134,6 +134,28 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+from django.contrib import messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: "alert-info",
+    messages.INFO: "alert-info",
+    messages.SUCCESS: "alert-success",
+    messages.WARNING: "alert-warning",
+    messages.ERROR: "alert-danger",
+}
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Configurações de autenticação
+LOGIN_URL = "login"
+
+# Redireciona usuário após login
+LOGIN_REDIRECT_URL = "index"
+
+# Redireciona usuário após logout
+LOGOUT_REDIRECT_URL = "login"
+
+# Adiciona '/' no final dos urls que não o tiverem
+APPEND_SLASH = True

@@ -35,6 +35,16 @@
     transform: scale(1.05);
 }
 
+.asteriskField {
+    display: none;
+}
+
+.svg-icon {
+    width: 40px;
+    height: auto;
+    fill: white; /* Define a cor de preenchimento da imagem SVG */
+}
+
 @media (max-width: 991px) {
     .sidebar {
         background-color: rgba(255, 255, 255, 0.15) !important;
